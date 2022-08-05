@@ -24,7 +24,7 @@
   --primary: var(--blue); }
 
 /* ---------------
-:: Web Fonts 
+:: Web Fonts
 --------------- */
 /*!
  * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
@@ -16932,3 +16932,58 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   transform: perspective(2500px) rotateX(100deg); }
   [data-aos='flip-down'].aos-animate {
     transform: perspective(2500px) rotateX(0); }
+
+    .logobox {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 100;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: white;
+      /* Fallback color */
+      background-color: rgba(255, 255, 255, 0.9);
+      /* Black w/ opacity */ }
+
+    /* logobox Content (image) */
+    .logobox-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px; }
+
+      .logobox-content, #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s; }
+
+        .closeLogobox {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: var(--blue);
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s; }
+
+        .closeLogobox:hover,
+        .closeLogobox:focus {
+          color: var(--blue3);
+          text-decoration: none;
+          cursor: pointer; }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+          .logobox-content {
+            width: 100%; } }

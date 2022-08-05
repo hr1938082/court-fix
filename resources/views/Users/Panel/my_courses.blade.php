@@ -11,30 +11,36 @@
 <section class="lg-padding" id="gallery">
     <div class="container">
       <div class="container-header mb-5">
-        <div class="title"><span>Courses</span></div>
-        <div class="subtitle"> <span>Lacus malesuada at viverra ut accumsan sagittis, hac.</span></div>
+        <div class="title"><span> My Courses</span></div>
+        <div class="subtitle"> <span style="font-size:20px;">This section is automatically created for all courses currently offered to New
+York State Adult Drug Treatment Court practitioners. Users have access to all
+the courses on this page.
+</span><br><br>
+<span style="font-size:20px;"><b>NOTE:</b> It is recommended that all learners start with the Welcome to Fountain
+Course.</span>
+</div>
       </div>
     </div>
     <div class="container">
       <div class="gallery-image">
         @foreach ($courses as $course)
-   
-    
-        
-          <div class="split">
-       
-                    <div class="card card_course"><img src="/image/{{$course->images->path}}">
+
+
+
+
+
+                    <div class="card card_course" style="width:500px;"><img src="/image/{{$course->images->path}}">
                     <a href="{{$course->link}}" target="blank">
                       <div class="card_content">
-                        <p>{{$course->title}}</p>
-                        <p class="opacity-low">{{$course->sub_title}}</p><a class="btn btn-xs btn-primary" href="#">{{$course->code}}</a>
+                        <p style=" text-align: center ; padding: 40px 0; padding-left:15px;">{{$course->title}}</p>
+                        <!-- <p class="opacity-low">{{$course->sub_title}}</p><a class="btn btn-xs btn-primary" href="#">{{$course->code}}</a> -->
                       </div>
                       </a>
                     </div>
 
-                   
-          </div>
-    
+
+
+
         @endforeach
         {{-- <div class="img-box"><img src="https://picsum.photos/350/250?image=232"/>
           <div class="caption-visible">

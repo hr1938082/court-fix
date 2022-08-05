@@ -23020,3 +23020,69 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 [data-aos=flip-down].aos-animate {
     transform: perspective(2500px) rotateX(0)
 }
+
+#centerLogo,
+#courtLogo {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s
+}
+
+#centerLogo :hover,
+#courtLogo :hover {
+    opacity: .7
+}
+
+.logobox {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .9)
+}
+
+.logobox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px
+}
+.logobox-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: .6s;
+    animation-name: zoom;
+    animation-duration: .6s
+}
+
+
+
+.closeLogobox {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--blue);
+    font-size: 40px;
+    font-weight: 700;
+    transition: .3s
+}
+
+.closeLogobox:focus,
+.closeLogobox:hover {
+    color: var(--blue3);
+    text-decoration: none;
+    cursor: pointer
+}
+
+@media only screen and (max-width:700px) {
+    .logobox-content {
+        width: 100%
+    }
+}
+
+

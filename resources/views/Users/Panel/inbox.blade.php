@@ -22,9 +22,9 @@
     z-index: 1;
     right: 0;
     margin-top:10px;
-  
+
     overflow: scroll;
-    
+
 }
 
 ::-webkit-scrollbar {
@@ -125,8 +125,8 @@
         </div>
       </label>
       <input id="show-menu" type="checkbox"/>
-      <ul id="menu"  > 
-        <li class="undefined logo menu-logo "><a href="index.html"><img src="./src/img/logo.png" alt="#{logoMenu}"/><img class="logo-small court" src="./src/img/new-york-state-unified-court-system.svg" alt="#{logoMenu}"/></a></li>
+      <ul id="menu"  >
+      &nbsp&nbsp&nbsp&nbsp&nbsp <li class="undefined logo menu-logo "><img src="./src/img/logo.png" alt="#{logoMenu}" id="centerLogo" style="cursor: pointer"/><img class="logo-small court" src="./src/img/new-york-state-unified-court-system.svg" alt="#{logoMenu}" id="courtLogo" style="cursor: pointer"/></li>
         <div class="undefined menu-links " id="menu_links">
           <!-- <li class="button no-margin"><a class="btn btn-sm btn-" href="#"><i class="fas fa-search"></i></a>
           </li> -->
@@ -140,6 +140,8 @@
       </ul>
     </nav>
   </menu>
+  <div class="logobox" id="courtModal"><span class="closeLogobox" id="closeCourt">&times;</span><img class="logobox-content" id="img01"/></div>
+  <div class="logobox" id="centerModal"><span class="closeLogobox" id="closeCenter">&times;</span><img class="logobox-content" id="img02"/></div>
   <div class="dialog">
     <dialog>
       <form method="dialog"><i class="cancel fa-solid fa-xmark"></i><strong>Confirm Action</strong>
@@ -150,13 +152,13 @@
   </div>
   <div class="main_content top-fixed full-width">
     <div id="frame" >
-     
+
       <div id="sidepanel" >
         <div id="profile">
           <div class="wrap">
           @if(auth()->user()->Images != null)
           @if(auth()->user()->Images->path != null)
-           
+
         <img class="online" id="profile-img" src="/image/{{auth()->user()->Images->path}}" alt="">
         @else
         <img class="online" id="profile-img" src="{{asset('src/img/users/user-1.png')}}" alt="">
@@ -198,7 +200,7 @@
           <br>
           <br>
           <br>
-         
+
           @if(auth()->user()->Images != null)
           @if(auth()->user()->Images->path != null)
           <div id="profileee" class="hasImage" style="background-image: url(/image/{{auth()->user()->Images->path}})">
@@ -210,13 +212,13 @@
 
            @endif
            <div class="dashes"></div>
-        
+
           </div>
-       
+
           <input type="file" name="profile_image" id="mediaFile" />
           <div id="mediaFileError"></div>
           <br>
-         
+
           <Fieldset>
             <input type="text" name="name" value="{{auth()->user()->name}}" id="name" placeholder="Your name" required  autofocus tabindex="1">
           </Fieldset>
@@ -237,19 +239,19 @@
     <label class="overlay-modal" for="target-modal"></label>
   </div>
 
-       
+
         <div id="search" >
-        
-         
+
+
           <span class="dropdown"  >
            <label for=""><i class="fas fa-search fa-fw" aria-hidden="true"></i></label>
            <input type="text"  id="dropdownMenu-calendarType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:340px;"  placeholder="Search Contacts">
-         
-         
-         
+
+
+
            {{-- <button class="btn btn-default btn-sm dropdown-toggle" id="dropdownMenu-calendarType" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="calendar-icon ic_view_month" id="calendarTypeIcon" style="margin-right: 4px;"></i><span id="calendarTypeName">Dropdown</span><i class="calendar-icon tui-full-calendar-dropdown-arrow"></i></button> --}}
            <ul class="dropdown-menu dropdown-content" id="dropdown" role="menu" aria-labelledby="dropdownMenu-calendarType">
-           
+
             {{-- <div class="blocker" style="border: 3px solid red;" onclick="hidePopup()"></div> --}}
              @php
              $users = App\Models\User::get();
@@ -261,32 +263,34 @@
          @endif
 
          @endforeach
-         
-           
+
+
            </ul>
-         
+
           </span>
-         
-    
+
+
 
     {{-- <div class="contanier" style="border: 3px solid red; background-color:#ccc;" id="data_div" style="display: none;">
     <p>dsadsa</p>
-     
 
-    
+
+
     </div> --}}
 
    </div>
 
-   
+
    <div id="contacts" >
 
-     
+
    @foreach ($conversations as $conversation)
    @php
-  
+      $user_delete_check = App\Models\User::where('id',$conversation->user_id_2)->count();
+
        $user_details = App\Models\User::where('id',$conversation->user_id_2)->first();
-      
+
+
    @endphp
     <ul >
       <a class="contacts-link" href="/Conversation/{{$user_details->id}}/{{$user_details->name}}">
@@ -306,7 +310,7 @@
               @endif
               <div class="meta">
                 <p class="name" style="color:white;">{{$user_details->name}}</p>
-                <p class="preview" style="color:white;"></p> 
+                <p class="preview" style="color:white;"></p>
                </div>
              </div>
            </li>
@@ -314,10 +318,10 @@
        </ul>
     @endforeach
    </div>
-  
+
       <div class="shaded" id="backToTop" onclick="goTop()"><i class="fas fa-angle-up"> </i></div>
     </body>
-    
+
     <script src="./src/js/jquery.min.js"> </script>
     <script src="./src/js/index.js"> </script>
     <script src="./src/js/aos.js"> </script>
@@ -330,16 +334,16 @@
 
 <script>
 
- 
-    
 
- 
+
+
+
     $(document).ready(function() {
-     
-     $('#dropdownMenu-calendarType').keyup(function (event) {            
-        
+
+     $('#dropdownMenu-calendarType').keyup(function (event) {
+
        var user = document.getElementById('dropdownMenu-calendarType').value;
-    
+
     console.log(user,{{auth()->id()}});
         var auth_id = {{auth()->id()}};
       $.ajaxSetup({
@@ -347,15 +351,15 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
           });
-                
+
           $.ajax({
             url: "/User-Search",
             type:"POST",
             data:{
               name:user,
-            
+
             },
-    
+
                     success: function(response) {
                        console.log(response);
                        var data = response.name;
@@ -365,46 +369,46 @@
                          console.log(data[key].id != auth_id ,'olalalala');
                  if(data[key].id != auth_id){
                   var block = '<li role="presentation"><a href="/Conversation/'+data[key].id+'/'+data[key].name+'" class="dropdown-menu-title" role="menuitem" data-action="toggle-daily"><img src="{{asset("src/img/users/user-6.png")}}" style="width:20px;" > &nbsp; &nbsp; &nbsp;'+data[key].name+'</a></li>';
-                    
+
                   $("#dropdown").append(block);
                  }
- 
-               
-             }); 
- 
+
+
+             });
+
              if(user == '')
                  {
                    var all_users = response.all_user;
                    $("#dropdown").empty();
                    Object.keys(all_users).forEach(function(key){
-                       
+
                  if(all_users[key].id != auth_id){
                   var block = '<li role="presentation"><a href="/Conversation/'+all_users[key].id+'/'+all_users[key].name+'" class="dropdown-menu-title" role="menuitem" data-action="toggle-daily"><img src="{{asset("src/img/users/user-6.png")}}" style="width:20px;" > &nbsp; &nbsp; &nbsp;'+all_users[key].name+'</a></li>';
-                    
+
                   $("#dropdown").append(block);
                  }
- 
-               
-             }); 
+
+
+             });
                  }
- 
-                      
+
+
                     }
- 
-                 
- 
- 
+
+
+
+
                 });
- 
- 
+
+
      });
- 
- 
- 
- 
+
+
+
+
          });
- 
- 
+
+
 
 
 
@@ -461,13 +465,13 @@ if (input.files && input.files[0]) {
     error.css('color','red');
     error.html('Image Size should be less than 2MB');
   }else{
-    
+
     error.css('color','transparent');
     error.html('');
     var reader = new FileReader();
 
     reader.readAsDataURL(file);
-    reader.onload = function(e) { 
+    reader.onload = function(e) {
       $('#profileee').css('background-image', 'url(' + reader.result + ')').addClass('hasImage');
     }
   }
@@ -477,24 +481,24 @@ if (input.files && input.files[0]) {
 
 
 
- 
+
  </script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.0/socket.io.js" integrity="sha512-g6IDmcVyjQOptVso4kf6adJ5TOfiAznQLg47qiscWvor/cMHje2RCh2tU39DB4udBIm5ZhL4CPcvVDHEzo0HgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript"> 
+    <script type="text/javascript">
         console.log('ssssssssssss');
         console.log( {{ auth()->id()}} , 'auth');
-        const socket = io("wss://chat.zeelco.com",{transports: ['websocket', 'polling'], upgrade: false, 
+        const socket = io("wss://chat.zeelco.com",{transports: ['websocket', 'polling'], upgrade: false,
             query: {
-              "Student_id": 87 , 
+              "Student_id": 87 ,
               "type":"Student"
             }});
             socket.on('reload',()=>{
             socket.emit("get_chat_list")
         });
         socket.emit("get_chat_list")
-       
+
             socket.on("chat_list",(list)=>{
-              
+
         console.log(list,'dsadhaskdhskadhksj')
         $('#contacts').empty();
                 list.forEach(element => {
@@ -505,14 +509,14 @@ if (input.files && input.files[0]) {
                    var block = '<li class="contacts-item archived"><a class="contacts-link" href="/Student/Conversation/'+element.userid+'/'+name_slug+'"><div class="avatar"><img src="{{asset('/public/profile_img')}}//'+element.Image+'" alt=""></div><div class="contacts-content"><div class="contacts-info"><h6 class="chat-name">'+element.Name+'</h6><div class="chat-time"><span>'+orignal_time+' </span></div></div><div class="contacts-texts"><p class="text-truncate">'+element.last_message+'</p></div> </div></a></li>'
 
                    var block2 = '<ul><a class="contacts-link" href="/Conversation/'+element.userid+'/'+name_slug+'"> <li class="contact"><div class="wrap"><span class="contact-status online"></span><img src="src/img/users/user-6.png"/><div class="meta"><p class="name" style="color:white;">'+element.Name+'</p><p class="preview" style="color:white;">'+element.last_message+'</p> </div></div></li></a></ul>'
-                     
+
                 $("#contacts").append(block2);
-           
+
         });
-        
+
         });
-         
-          
+
+
         </script> --}}
 
 

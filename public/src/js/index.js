@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
   //     videoURL += "?autoplay=1";
   //     $('#video').prop('src',videoURL);
   //   });
-    
+
   //   // When the close button is clicked make the lightbox fade out in the span of 0.5 seconds and show the play button
   //   $("#close-btn").on("click", function() {
   //     $("#lightbox").fadeOut(500);
@@ -92,7 +92,7 @@ function getDocHeight() {
 // });
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function() {scrollFunction()};
-  
+
   function scrollFunction() {
     if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
       backButton.style.display = "block";
@@ -104,15 +104,15 @@ function getDocHeight() {
       backButton.style.display = "none";
     }
   }
-  
+
   function goTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  
+
 
 // gallery preview image
-// 
+//
 if ($('.preview-box').length > 0) {
   //getting all required elements
   const gallery  = document.querySelectorAll(".image"),
@@ -125,13 +125,13 @@ if ($('.preview-box').length > 0) {
   textSlide = previewBox.querySelector(".text-slide"),
   captionSlide = previewBox.querySelector(".caption-slide"),
   shadow = document.querySelector(".shadow");
-  
+
   window.onload = ()=>{
       for (let i = 0; i < gallery.length; i++) {
           // totalImg.textContent = gallery.length; //passing total img length to totalImg variable
           let newIndex = i; //passing i value to newIndex variable
           let clickedImgIndex; //creating new variable
-          
+
           gallery[i].onclick = () =>{
               clickedImgIndex = i; //passing cliked image index to created variable (clickedImgIndex)
               function preview(){
@@ -146,55 +146,55 @@ if ($('.preview-box').length > 0) {
                 previewImg.src = imageURL //passing user clicked img url in previewImg src
               }
               preview(); //calling above function
-      
+
               const prevBtn = document.querySelector(".prev");
               const nextBtn = document.querySelector(".next");
               if(newIndex == 0){ //if index value is equal to 0 then hide prevBtn
-                  prevBtn.style.display = "none"; 
+                  prevBtn.style.display = "none";
               }
               if(newIndex >= gallery.length - 1){ //if index value is greater and equal to gallery length by -1 then hide nextBtn
-                  nextBtn.style.display = "none"; 
+                  nextBtn.style.display = "none";
               }
-              prevBtn.onclick = ()=>{ 
+              prevBtn.onclick = ()=>{
                   newIndex--; //decrement index
                   if(newIndex == 0){
-                      preview(); 
-                      prevBtn.style.display = "none"; 
+                      preview();
+                      prevBtn.style.display = "none";
                   }else{
                       preview();
                       nextBtn.style.display = "block";
-                  } 
+                  }
               }
-              nextBtn.onclick = ()=>{ 
+              nextBtn.onclick = ()=>{
                   newIndex++; //increment index
                   if(newIndex >= gallery.length - 1){
-                      preview(); 
+                      preview();
                       nextBtn.style.display = "none";
                   }else{
-                      preview(); 
+                      preview();
                       prevBtn.style.display = "block";
                   }
               }
               document.querySelector("body").style.overflow = "hidden";
-              previewBox.classList.add("show"); 
-              shadow.style.display = "block"; 
+              previewBox.classList.add("show");
+              shadow.style.display = "block";
               closeIcon.onclick = ()=>{
                   newIndex = clickedImgIndex; //assigning user first clicked img index to newIndex
-                  prevBtn.style.display = "block"; 
+                  prevBtn.style.display = "block";
                   nextBtn.style.display = "block";
                   previewBox.classList.remove("show");
                   shadow.style.display = "none";
                   document.querySelector("body").style.overflow = "scroll";
               }
           }
-          
+
       }
-      
+
   }
 
 }
 
-          
+
 toastMessage = () => {
   var x = document.getElementById("toast");
   x.className = "show";
@@ -206,40 +206,40 @@ if ($('.dialog').length > 0){
     invoke = document.getElementById('invoke'),
     output = document.querySelector('output'),
     cancel = dialog.querySelector('.cancel');
-    close = dialog.querySelector('.close');
-  
+    close = dialog.querySelector('.closeLogout');
+
   if (typeof dialog.showModal !== 'function') {
     output.value = `Modal dialog not supported`;
   }
-  
+
   invoke.addEventListener('click', () => {
     dialog.returnValue = false;
     dialog.showModal();
   });
-  
+
   dialog.addEventListener('close', () => {
     dialog.returnValue = dialog.returnValue.toLowerCase() === 'true';
     output.value = dialog.returnValue;
   });
-  
-  close.addEventListener('click', () => {
-    dialog.close(false);
-  });
-  
-  
+
+  // close.addEventListener('click', () => {
+  //   dialog.close(false);
+  // });
+
+
   cancel.addEventListener('click', () => {
     dialog.close(false);
   });
-  
+
   dialog.addEventListener('click', (e) => {
     const rect = dialog.getBoundingClientRect();
-  
+
     const inDialog =
       rect.top <= e.clientY &&
       e.clientY <= rect.top + rect.height &&
       rect.left <= e.clientX &&
       e.clientX <= rect.left + rect.width;
-  
+
     !inDialog && dialog.close();
   });
 }
@@ -251,12 +251,12 @@ if ($('.button-play').length > 0){
 
   window.onload = ()=>{
     const videoButton  = document.querySelectorAll(".button-play")
-    
+
     for (let i = 0; i < videoButton.length; i++) {
       // totalImg.textContent = gallery.length; //passing total img length to totalImg variable
       let newIndex = i; //passing i value to newIndex variable
       let clickedImgIndex; //creating new variable
-      
+
         videoButton[i].onclick = () =>{
           // console.log(videoButton[i].nextElementSibling)
           let video = videoButton[i].nextElementSibling;
@@ -265,7 +265,7 @@ if ($('.button-play').length > 0){
         }
     }
   }
-  
+
   // var playVideo = (e)=>{
   //   const videoButton  = document.querySelectorAll(".button-video-lightbox")
   //   // let id = e.target.parentNode.id
@@ -273,16 +273,16 @@ if ($('.button-play').length > 0){
   //   // let video = e.target.parentNode.nextElementSibling.id;
   //   // let audioBtn = document.getElementById('bt_mute');
   //   button.style.display = 'none';
-  
+
   //   // audioBtn.style.opacity = 1;
   //   document.getElementById(video).play();
   // }
-  
+
   const spokeVideo = document.getElementById('spokeVideo');
   var muteVideo = () => {
   spokeVideo.muted == true ? mute() : unmute();
   }
-  
+
   let mute = () => {
   audioBtn = document.getElementById('audioBtn');
   audioBtn.classList.remove('fa-volume-mute')
@@ -296,19 +296,77 @@ if ($('.button-play').length > 0){
   spokeVideo.muted = true
   }
 
-}  
+}
 
 
 
 
 TitleCase = (str) => {
-    return str.replace(
-      /\w\S*/g,
-      function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-      }
-    );
+  return str.replace(
+    /\w\S*/g,
+    function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+  );
+}
+
+// window.onload = function(){
+
+
+
+  var centerLogo = document.getElementById("centerLogo");
+  // Get the modal
+  var centerModal = document.getElementById("centerModal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var centerModalImg = document.getElementById("img02");
+  // var captionText = document.getElementById("caption");
+  // if (centerLogo > 1){
+    centerLogo.onclick = function(){
+      source = this.src;
+      console.log(centerModalImg)
+      centerModal.style.display = "block";
+      centerModalImg.src = source;
+      // console.log(modalImg.src)
+      // captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var closeCenter = document.getElementById("closeCenter");
+
+
+    // When the user clicks on <span> (x), close the modal
+    closeCenter.onclick = function() {
+      centerModal.style.display = "none";
+      // console.log(this)
+    }
+
+  // }
+
+
+var courtLogo = document.getElementById("courtLogo");
+// if (courtLogo > 1){
+  // Get the modal
+  var courtModal = document.getElementById("courtModal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  courtLogo.onclick = function(){
+    courtModal.style.display = "block";
+    modalImg.src = this.src;
+    // console.log(modalImg.src)
+    // captionText.innerHTML = this.alt;
   }
 
+  // Get the <span> element that closes the modal
+  var closeCourt = document.getElementById("closeCourt");
+
+  // When the user clicks on <span> (x), close the modal
+  closeCourt.onclick = function() {
+    courtModal.style.display = "none";
+  }
+// }
 
 
+// };

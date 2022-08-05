@@ -27,7 +27,7 @@
           <div class="content">
             <div class="split">
               <div class="left margin container-header">
-                <div class="subtitle"> 
+                <div class="subtitle">
                   <h2>A Story on Recovery and The Impact of Adult Treatment Courts</h2>
                 </div>
                 <div class="text text-dark mt-4">
@@ -55,7 +55,7 @@
               <h4>Hover your pointer or click on each job title to learn more.</h4>
             </div>
             <div class="split margin-row">
-              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_judge"> 
+              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_judge">
                   <div class="container-header">
                     <div class="title">
                       <p>Judge</p>
@@ -64,7 +64,7 @@
                   <div class="details">
                     <p>The Roles of the Drug Court Judge</p>
                   </div></a></div>
-              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_coordinator"> 
+              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_coordinator">
                   <div class="container-header">
                     <div class="title">
                       <p>Drug Court Coordinator</p>
@@ -73,7 +73,7 @@
                   <div class="details">
                     <p>The Roles of the Drug Court Coordinator</p>
                   </div></a></div>
-              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_prosecutor"> 
+              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_prosecutor">
                   <div class="container-header">
                     <div class="title">
                       <p>Prosecutor</p>
@@ -83,8 +83,8 @@
                     <p>The Roles of the Prosecutor</p>
                   </div></a></div>
             </div>
-            <div class="split"> 
-              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_defense_counsel"> 
+            <div class="split">
+              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_defense_counsel">
                   <div class="container-header">
                     <div class="title">
                       <p>Defense Counsel</p>
@@ -93,7 +93,7 @@
                   <div class="details">
                     <p>The Roles of the Defense Counsel</p>
                   </div></a></div>
-              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_treatment_provider"> 
+              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_treatment_provider">
                   <div class="container-header">
                     <div class="title">
                       <p>Treatment Provider</p>
@@ -102,7 +102,7 @@
                   <div class="details">
                     <p>The Roles of the Treatment Provider</p>
                   </div></a></div>
-              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_case_manager"> 
+              <div class="card blue_card"><a class="pt-3 pb-3" href="#roles_case_manager">
                   <div class="container-header">
                     <div class="title">
                       <p>Case Manager</p>
@@ -163,7 +163,7 @@
                         <p>Click on the image to hear from other colleagues in New York State to learn more about each role before beginning the course.</p>
                         <p class="bold">Begin Drug Treatment Court Judge eLearning Course</p>
                       </div>
-                      <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=05c3193d-ecbb-4778-b1c0-760b2acea17f">Get Started</a>
+                      <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=577b6f32-d7d3-41c7-a856-fd30e7f09141" target="blank">Get Started</a>
                       </div>
                     </div>
                   </div>
@@ -206,7 +206,7 @@
                       <p>Click on the image to hear from other colleagues in New York State to learn more about each role before beginning the course.</p>
                       <p class="bold">Begin Drug Treatment Court Coordinator eLearning Course</p>
                     </div>
-                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=e042e4e8-2de3-46da-9107-77bbca52f8f9">Get Started</a>
+                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=5f8810df-02ae-46b6-90e7-fa11b2f27922" target="blank">Get Started</a>
                     </div>
                   </div>
                 </div>
@@ -248,7 +248,7 @@
                       <p>Click on the image to hear from other colleagues in New York State to learn more about each role before beginning the course.</p>
                       <p class="bold">Begin Drug Treatment Court Prosecutor eLearning Course</p>
                     </div>
-                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=2c7778a3-24ae-4bf8-81b4-07c20808d555">Get Started</a>
+                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=04e836d5-aa21-4612-8e01-61450d6f9df2" target="blank">Get Started</a>
                     </div>
                   </div>
                 </div>
@@ -290,7 +290,7 @@
                       <p>Click on the image to hear from other colleagues in New York State to learn more about each role before beginning the course.</p>
                       <p class="bold">Begin Drug Treatment Court Defense Counsel eLearning Course</p>
                     </div>
-                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=1c45c96f-c914-4cdf-a62b-06c769692973">Get Started</a>
+                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=1c3bcbdb-89e1-4b65-be37-306d0e44355b" target="blank">Get Started</a>
                     </div>
                   </div>
                 </div>
@@ -308,7 +308,7 @@
         </div>
       </div>
     </div>
-  </section>   
+  </section>
   <section class="lg-padding bg-gray2 video-lightbox-section" id="roles_treatment_provider">
     <div class="aos-item" data-aos="fade-up" data-aos-duration="350" data-aos-delay="0" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
       <div class="aos-item__inner">
@@ -332,7 +332,7 @@
                       <p>Click on the image to hear from other colleagues in New York State to learn more about each role before beginning the course.</p>
                       <p class="bold">Begin Drug Treatment Court Treatment Provider eLearning Course</p>
                     </div>
-                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=37a75f99-d247-4f00-b86d-97c5b736cd65">Get Started</a>
+                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=e2bf2ff9-cad8-472d-9078-3c48b614967b" target="blank">Get Started</a>
                     </div>
                   </div>
                 </div>
@@ -373,7 +373,7 @@
                       <p>Click on the image to hear from other colleagues in New York State to learn more about each role before beginning the course.</p>
                       <p class="bold">Begin Drug Treatment Court Case Manager eLearning Course</p>
                     </div>
-                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=74ab78ba-04c2-45a6-9918-ce2f3f3ffe85">Get Started</a>
+                    <div class="mt-1"><a class="btn btn-sm btn-primary outlined" href="https://cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=d5af0ba8-57c5-440e-9f14-e52bfc8cc55c" target="blank">Get Started</a>
                     </div>
                   </div>
                 </div>

@@ -11,7 +11,7 @@
     <title>Center for Court Innovation : Splashscreen</title>
   </head>
 
-  
+
 </html>
 <body class="aos-all" id="transcroller-body">
   <menu class=" container menu" id="home">
@@ -23,7 +23,7 @@
       </label>
       <input id="show-menu" type="checkbox"/>
       <ul id="menu">
-        <li class="undefined logo menu-logo "><a href="index.html"><img src="./src/img/logo.png" alt="#{logoMenu}"/><img class="logo-small court" src="./src/img/court justice.jpg" alt="#{logoMenu}"/></a></li>
+      <li class="undefined logo menu-logo "><img src="./src/img/logo.png" alt="#{logoMenu}" id="centerLogo" style="cursor: pointer"/><img class="logo-small court" src="./src/img/new-york-state-unified-court-system.svg" alt="#{logoMenu}" id="courtLogo" style="cursor: pointer"/></li>
         <div class="undefined menu-links " id="menu_links">
           <li class="button"><a class="btn btn-sm btn-primary" href="{{ route('register') }}">Register</a>
           </li>
@@ -33,6 +33,8 @@
       </ul>
     </nav>
   </menu>
+  <div class="logobox" id="courtModal"><span class="closeLogobox" id="closeCourt">&times;</span><img class="logobox-content" id="img01"/></div>
+  <div class="logobox" id="centerModal"><span class="closeLogobox" id="closeCenter">&times;</span><img class="logobox-content" id="img02"/></div>
   <section class="no-padding parallax main-section big flow slideshow bg-image" id="splash">
     <div class="mb_parallax_overlay">
       <li> <span></span></li>

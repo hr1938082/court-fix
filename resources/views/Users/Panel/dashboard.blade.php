@@ -15,7 +15,7 @@
           <div class="title text-dark container"> <img src="src/img/icon/fountain-icon-blue.svg" type="svg">
             <h1>Welcome to Fountain</h1>
           </div>
-          <div class="container text mt-5"> 
+          <div class="container text mt-5">
             <p class="text-dark">“Only by defining the bounds of acceptable and exceptional practices will Drug Courts be in a position to  disown poor-quality or harmful programs and set effective benchmarks for new and  existing programs to achieve. “</p><small class="text-gray">— Adult Drug Court Best Practice Standards, Volume I (NADCP, 2013; p. 1) —</small>
           </div>
         </div>
@@ -40,7 +40,7 @@
             <div class="videoWrapper media">
               <div class="video-holder d-flex-centered" id="spokeVideoHolder">
                 <button class="button-play" id="button"><i class="fa fa-play" aria-hidden="true"></i></button>
-                <video class="video" id="spokeVideo" controls playsinline poster="src/img/uploads/toolkit.jpg">
+                <video class="video" id="spokeVideo" controls playsinline poster="src/img/uploads/toolkit_updated.PNG">
                   <source id="webm" src="src/media/videos/Dr._Sean_Bailey_-_Toolkit_Welcome_Video.mp4" type="video/webm">
                 </video>
               </div>
@@ -126,8 +126,8 @@
                   <div class="container-header">
                     <div class="subtitle"><span>What Makes an Effective Adult Drug Court Team Member?</span></div>
                   </div>
-                  <div class="text text-dark mt-4"> 
-                    <p class="bold">Pamela LaMancuso is an Adult Drug Treatment Court Coordinator, and she was asked the question. Watch the video to learn more about her story.</p>
+                  <div class="text text-dark mt-4">
+                    <p class="bold">Watch the Hon. Judge Craig Hannah speak to this question when recently asked.</p>
                     <p>A dedicated multidisciplinary team of professionals manages the day-to-day operations of the Adult Drug Treatment Court, including reviewing participant progress during pre-court staff meetings and status hearings, contributing observations and recommendations within team members’ respective areas of expertise, and overseeing the connection of legal, treatment, and supervision services.</p>
                     <p>including reviewing participant progress during pre-court staff meetings and status hearings, contributing observations and recommendations within team members’ respective areas of expertise, and delivering or overseeing the delivery of legal, treatment and supervision services.</p>
                     <p>The ultimate effectiveness within a Drug Court team is their ability to communicate early and often, sacrifice ego and personal achievement for the sake of the participants, and come together as a unit with the common goal of helping the participant lead a successful life towards substance use disorder recovery.</p>
@@ -137,7 +137,7 @@
               <div class="videoWrapper media">
                 <div class="video-holder d-flex-centered" id="spokeVideoHolder">
                   <button class="button-play" id="button"><i class="fa fa-play" aria-hidden="true"></i></button>
-                  <video class="video" id="spokeVideo" controls playsinline poster="src/img/uploads/IMG_1991.jpg">
+                  <video class="video" id="spokeVideo" controls playsinline poster="src/img/uploads/IMG_1991_new.PNG">
                     <source id="webm" src="src/media/videos/What Makes An Effective Drug Court Team Member NEW.mp4" type="video/webm">
                   </video>
                 </div>
@@ -190,7 +190,7 @@
                 <div class="video-holder d-flex-centered" id="spokeVideoHolder">
                   <button class="button-play" id="button"><i class="fa fa-play" aria-hidden="true"></i></button>
                   <video class="video" id="spokeVideo" controls playsinline poster="src/img/uploads/dress_for_success.png">
-                    <source id="webm" src="src/media/videos/Video Workshop For Drug Court.webm" type="video/webm">
+                    <source id="webm" src="src/media/videos/Trauma-Informed Policies UPDATED.mp4" type="video/webm">
                   </video>
                 </div>
               </div>
@@ -201,7 +201,7 @@
                   </div>
                   <div class="text text-dark mt-4">
                     <p>The courtroom setting for many who are justice involved is an environment that can exacerbate trauma-related issues. As a court practitioner it is important to utilize person centered care policies and practices to inform your program, and organization to actively avoid re-traumatization in court participants. The goal to create spaces that are welcoming , that demonstrate a safe and trusting environment for participants , while at the same time not interfering with the court and practitioners’ ability create routines, reach goals, and overall operations.</p>
-                    <p>To review more information on creating trauma informed spaces, 
+                    <p>To review more information on creating trauma informed spaces,
                       <mark><a target="blank" href="https://docs.google.com/presentation/d/1igoodieeCaYMK70yquXdmPtAcgKVmjtb/edit#slide=id.p1">reference here</a></mark>
                     </p>
                   </div>
@@ -358,7 +358,7 @@
     </div>
     <label class="overlay-modal" for="target-modal"></label>
   </div>
- 
+
         <div id="toast">
             <p class="bold">Welcome to Dashboard</p>
             <p></p>

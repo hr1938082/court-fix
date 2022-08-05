@@ -22,7 +22,7 @@
       </label>
       <input id="show-menu" type="checkbox"/>
       <ul id="menu">
-        <li class="undefined logo menu-logo "><a href="/dashboard"><img src="./src/img/logo.png" alt="#{logoMenu}"/><img class="logo-small court" src="./src/img/new-york-state-unified-court-system.svg" alt="#{logoMenu}"/></a></li>
+      &nbsp&nbsp&nbsp&nbsp&nbsp <li class="undefined logo menu-logo "><img src="./src/img/logo.png" alt="#{logoMenu}" id="centerLogo" style="cursor: pointer"/><img class="logo-small court" src="./src/img/new-york-state-unified-court-system.svg" alt="#{logoMenu}" id="courtLogo" style="cursor: pointer"/></li>
         <div class="undefined menu-links " id="menu_links">
           <li class="button no-margin">
             <!-- <div class="Hotbg">
@@ -38,6 +38,8 @@
       </ul>
     </nav>
   </menu>
+  <div class="logobox" id="courtModal"><span class="closeLogobox" id="closeCourt">&times;</span><img class="logobox-content" id="img01"/></div>
+  <div class="logobox" id="centerModal"><span class="closeLogobox" id="closeCenter">&times;</span><img class="logobox-content" id="img02"/></div>
   <div class="dialog">
     <dialog>
       <form method="dialog"><i class="cancel fa-solid fa-xmark"></i><strong>Confirm Action</strong>

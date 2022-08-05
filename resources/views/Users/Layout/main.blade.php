@@ -22,9 +22,9 @@
     z-index: 1;
     right: 0;
     margin-top:-4px;
-  
+
     overflow: scroll;
-    
+
 }
 
 #dropdownMenu-calendarType {
@@ -32,7 +32,7 @@
     width: 90%;
     border: 1px solid black;
      margin-left:10px;
-   
+
 }
 
 
@@ -59,7 +59,7 @@
       </label>
       <input id="show-menu" type="checkbox"/>
       <ul id="menu">
-        <li class="undefined logo menu-logo "><a href="/dashboard"><img src="./src/img/logo.png" alt="#{logoMenu}"/><img class="logo-small court" src="./src/img/new-york-state-unified-court-system.svg" alt="#{logoMenu}"/></a></li>
+     &nbsp&nbsp&nbsp&nbsp&nbsp <li class="undefined logo menu-logo "><img src="./src/img/logo.png" alt="#{logoMenu}" id="centerLogo" style="cursor: pointer"/><img class="logo-small court" src="./src/img/new-york-state-unified-court-system.svg" alt="#{logoMenu}" id="courtLogo" style="cursor: pointer"/></li>
       <div class="undefined menu-links " id="menu_links">
         <div class="dropdown">
           @php
@@ -67,7 +67,7 @@
           @endphp
           <li class="button no-margin" ><a class="btn btn-sm btn-" href="#"><i class="fas fa-search"></i></a>
           </li>
-         
+
             <div id="myDropdown" class="dropdown-content">
               <br>
             <input type="text" onkeyup="search_page_keyword(event)" id="dropdownMenu-calendarType" placeholder="Search.."  >
@@ -88,6 +88,8 @@
       </ul>
     </nav>
   </menu>
+  <div class="logobox" id="courtModal"><span class="closeLogobox" id="closeCourt">&times;</span><img class="logobox-content" id="img01"/></div>
+  <div class="logobox" id="centerModal"><span class="closeLogobox" id="closeCenter">&times;</span><img class="logobox-content" id="img02"/></div>
   <div class="dialog">
     <dialog>
       <form method="dialog"><i class="cancel fa-solid fa-xmark"></i><strong>Confirm Action</strong>
@@ -171,6 +173,9 @@
 <script src="./src/js/jquery.min.js"> </script>
 <script src="./src/js/index.js"> </script>
 <script src="./src/js/aos.js"> </script>
+<script type="module" src="./src/js/core.js"> </script>
+<link rel="modulepreload" href="./src/js/swiper.bundle.min.js">
+
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.4.0/jquery.quicksearch.js"></script>
 <script>
@@ -186,11 +191,11 @@
 
 
   $(document).ready(function() {
-    
-  
 
-    $('#dropdownMenu-calendarType').keyup(function (event) {            
-       
+
+
+    $('#dropdownMenu-calendarType').keyup(function (event) {
+
 
       const box = document.getElementById('for_append');
       console.log(box.childNodes.length);
@@ -205,23 +210,23 @@
          }
 
       var course = document.getElementById('dropdownMenu-calendarType').value;
-   
-  
+
+
        var auth_id = {{auth()->id()}};
      $.ajaxSetup({
        headers: {
            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
            }
          });
-               
+
          $.ajax({
            url: "/Cousrse_Search",
            type:"POST",
            data:{
              name:course,
-           
+
            },
-   
+
                    success: function(response) {
                    //   console.log(response,'ye raha response');
                       var data = response.courses;
@@ -229,19 +234,19 @@
                       $("#for_append").empty();
                       Object.keys(data).forEach(function(key){
                        // console.log(data[key].id != auth_id ,'olalalala');
-                
-                 var block = '  <a href="'+data[key].link+'">'+data[key].title+'</a>';
-                   
-                 $("#for_append").append(block);
-               
-             
-              
-            }); 
 
-                     
+                 var block = '  <a href="'+data[key].link+'">'+data[key].title+'</a>';
+
+                 $("#for_append").append(block);
+
+
+
+            });
+
+
                    }
 
-                
+
 
 
                });
@@ -295,11 +300,11 @@ console.log(idx.search("Pharmacology"));
 //     if(e.keyCode == 13){
 // 		console.log('on after',e.keyCode);
 //    var search_val = document.getElementById('dropdownMenu-calendarType').value;
- 
+
 //     window.find(search_val);
 
 //    }
-  
+
 // 	},
 
 // 	'hide': function () {
@@ -318,7 +323,7 @@ console.log(idx.search("Pharmacology"));
 
 
   $('#dropdownMenu-calendarType').quicksearch('table tbody tr', {
- 
+
  'delay': 400,
  //'bind': 'keyup keydown',
  'show': function() {
@@ -335,16 +340,16 @@ console.log(idx.search("Pharmacology"));
          return;
      }
      if ($('#dropdownMenu-calendarType').length > 0){
-  
+
        var search_val = document.getElementById('dropdownMenu-calendarType').value;
-      
+
   window.find(search_val);
-          
-       
+
+
      }
     }
 });
-  
+
  },
  'hide': function() {
      $(this).removeClass('show');
@@ -359,5 +364,5 @@ console.log(idx.search("Pharmacology"));
 });
 
 $('#dropdownMenu-calendarType').focus();
-  
+
 </script>
