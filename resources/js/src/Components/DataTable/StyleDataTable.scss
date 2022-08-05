@@ -1,0 +1,42 @@
+.data-table-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .toolbar {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        li {
+            margin: 0 .5rem;
+
+            .search {
+                border-bottom: 1px solid black;
+
+                .search-icon {
+                    margin: 0 .2rem;
+                }
+
+                .clear {
+                    cursor: pointer;
+                }
+
+                input {
+                    font-size: 1rem;
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
